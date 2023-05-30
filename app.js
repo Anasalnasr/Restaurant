@@ -36,9 +36,9 @@ function handleFormSubmit(event) {
     event.preventDefault();
 
     // Get form inputs
-    var foodName = document.getElementById("food-name").value;
-    var foodType = document.getElementById("food-type").value;
-    var foodPrice = document.getElementById("price").value;
+    var foodName = event.target.elements["food-name"].value;
+    var foodType = event.target.elements["food-type"].value;
+    var foodPrice = event.target.elements["price"].value;
 
     // Generate a unique food ID
     var foodId = currentId++;
@@ -50,8 +50,8 @@ function handleFormSubmit(event) {
     food.render();
 
     // Reset the form
-    document.getElementById("food-form").reset();
+    event.target.reset();
 }
 
 // Add event listener to the form submit button
-document.getElementById("submit-button").addEventListener("click", handleFormSubmit);
+document.getElementById("food-form").addEventListener("submit", handleFormSubmit);
