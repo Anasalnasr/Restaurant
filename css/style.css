@@ -965,8 +965,9 @@ a:focus {
 /*# sourceMappingURL=style.css.map */
 table {
   border-collapse: collapse;
-  width: 100%;
   margin-top: 50px;
+  width: 100% !important;
+
 }
 
 th, td {
@@ -976,8 +977,9 @@ th, td {
 }
 
 th {
-  background-color: rgb(83, 231, 231);
+  background-color: #51b5ef;
 }
 .form-container{
   margin-top: 50px;
+  
 }
